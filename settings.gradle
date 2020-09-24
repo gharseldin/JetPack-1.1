@@ -1,0 +1,3 @@
+include ':dicelight'
+include ':app'
+rootProject.name = "JetPack1.1"

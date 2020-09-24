@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DiceLight</string>
+    <string name="menu_refresh">refresh</string>
+    <string name="menu_words">words</string>
+</resources>
