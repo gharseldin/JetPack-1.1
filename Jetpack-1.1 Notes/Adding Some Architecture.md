@@ -13,6 +13,7 @@
 
 **Unidirectional Data Flow**
  
+ ![UDF](images/udf.png)
 - When a user does something in the UI, such as click a toolbar button, the UI calls a function on something called “the motor”
 - In response to those calls, the motor asks the repository to read, update, or delete some data, using some sort of asynchronous mechanism
 - The result of the repository work gets delivered to the motor via that asynchronous mechanism
