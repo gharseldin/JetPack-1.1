@@ -1,6 +1,5 @@
-**Adding Some Architecture**
-----------------------------
-****
+## Adding Some Architecture
+***
 **Repositories**
 - Google's recommended architecture pattern.
 - Handles network, I/O
@@ -41,4 +40,4 @@ what the user sees
 - An event is something that we want to use exactly once, regardless of any
 configuration changes that may or may not occur
 
-
+[sample project](https://github.com/gharseldin/JetPack-1.1/tree/master/dicelight)
