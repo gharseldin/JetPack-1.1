@@ -7,14 +7,15 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
-import com.amr.gharseldin.dicelight.databinding.ActivityMainBinding
+import com.amr.gharseldin.dicelight.databinding.ActivityDiceLightBinding
 
-class MainActivity : AppCompatActivity() {
+
+class DiceLightActivity : AppCompatActivity() {
     private val motor: MainMotor by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityDiceLightBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         motor.results.observe(this) { viewState ->
             when (viewState) {
