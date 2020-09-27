@@ -20,7 +20,7 @@ class SimpleWorker: Thread(TAG) {
         Log.i(TAG, "SimpleWorker Terminated")
     }
 
-    fun excute(task: Runnable):SimpleWorker{
+    fun execute(task: Runnable):SimpleWorker{
         taskQueue.add(task)
         return this
     }

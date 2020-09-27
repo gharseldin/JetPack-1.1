@@ -10,8 +10,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val worker = SimpleWorker()
-    private val handler = Handler(Looper.getMainLooper()){
+    //    private val worker = SimpleWorker()
+    private val worker = Worker()
+    private val handler = Handler(Looper.getMainLooper()) {
         tvMessage.text = it.obj.toString()
         true
     }
@@ -21,17 +22,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tvMessage = message
-        worker.excute { ->
+        worker.execute { ->
             Thread.sleep(1000)
             val message = Message.obtain()
             message.obj = "Task 1 completed"
             handler.sendMessage(message)
-        }.excute {
+        }.execute {
             Thread.sleep(5000)
             val message = Message.obtain()
             message.obj = "Task 2 completed"
             handler.sendMessage(message)
-        }.excute {
+        }.execute {
             Thread.sleep(1000)
             val message = Message.obtain()
             message.obj = "Task 3 completed"
