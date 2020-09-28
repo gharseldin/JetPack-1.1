@@ -1,3 +1,4 @@
+include ':diceaware'
 include ':looperalternative'
 include ':dicelight'
 include ':app'

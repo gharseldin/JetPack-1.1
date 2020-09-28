@@ -11,9 +11,12 @@ import com.amr.gharseldin.dicelight.databinding.ActivityDiceLightBinding
 
 
 class DiceLightActivity : AppCompatActivity() {
+
     private val motor: MainMotor by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val binding = ActivityDiceLightBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
